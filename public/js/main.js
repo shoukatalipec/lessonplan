@@ -231,8 +231,8 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     for (const row of rows) {
       const period = parseInt(row.querySelector("td:first-child").textContent);
-      const subjects = row.querySelector("td:nth-child(2)").innerText;
-      const teachers = row.querySelector("td:last-child").innerText;
+      const subjects = row.querySelector("td:nth-child(2)").textContent;
+      const teachers = row.querySelector("td:last-child").textContent;
       const rowData = {
         class: selectedClass,
         week: selectedWeek, // Include week
