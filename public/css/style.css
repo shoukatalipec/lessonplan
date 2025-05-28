@@ -1,0 +1,275 @@
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #f3f4f6;
+  color: #333;
+  line-height: 1.6;
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.container {
+  background-color: #ffffff;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  max-width: 1200px;
+  width: 100%;
+  box-sizing: border-box;
+}
+h1,
+h2 {
+  color: #1f2937;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+label {
+  font-weight: 600;
+  margin-right: 0.5rem;
+  color: #4b5563;
+}
+select,
+input[type="text"] {
+  padding: 0.4rem 0.8rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  font-size: 0.9rem;
+  max-width: 200px;
+  box-sizing: border-box;
+  transition: border-color 0.2s ease-in-out;
+}
+select:focus,
+input[type="text"]:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.25);
+}
+.top-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.button-group {
+  display: flex;
+  gap: 0.8rem; /* Space between buttons */
+  flex-wrap: wrap; /* Allow buttons to wrap on small screens */
+  justify-content: center; /* Center buttons if they wrap */
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1.5rem;
+  overflow: hidden;
+  border-radius: 0.75rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  font-size: 0.9rem;
+}
+th,
+td {
+  padding: 0.6rem 0.8rem;
+  text-align: left;
+  border: none;
+}
+th {
+  background-color: #ffffff;
+  color: #374151;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+tr:nth-child(even) {
+  background-color: #f9fafb;
+}
+tr:hover {
+  background-color: #eff6ff;
+}
+td select {
+  max-width: 150px;
+  font-size: 0.85rem;
+  padding: 0.3rem 0.6rem;
+}
+
+#lesson-plan-table th:nth-child(1),
+#lesson-plan-table td:nth-child(1),
+#saved-data-table th:nth-child(1),
+#saved-data-table td:nth-child(1) {
+  width: 3%;
+}
+#lesson-plan-table th:nth-child(2),
+#lesson-plan-table td:nth-child(2),
+#saved-data-table th:nth-child(2),
+#saved-data-table td:nth-child(2) {
+  width: 6%;
+}
+#lesson-plan-table th:nth-child(3),
+#lesson-plan-table td:nth-child(3),
+#saved-data-table th:nth-child(3),
+#saved-data-table td:nth-child(3) {
+  width: 17%;
+}
+#lesson-plan-table th:nth-child(4),
+#lesson-plan-table td:nth-child(4),
+#saved-data-table th:nth-child(4),
+#saved-data-table td:nth-child(4) {
+  width: 17%;
+}
+#lesson-plan-table th:nth-child(5),
+#lesson-plan-table td:nth-child(5),
+#saved-data-table th:nth-child(5),
+#saved-data-table td:nth-child(5) {
+  width: 17%;
+}
+#lesson-plan-table th:nth-child(6),
+#lesson-plan-table td:nth-child(6),
+#saved-data-table th:nth-child(6),
+#saved-data-table td:nth-child(6) {
+  width: 17%;
+}
+#lesson-plan-table th:nth-child(7),
+#lesson-plan-table td:nth-child(7),
+#saved-data-table th:nth-child(7),
+#saved-data-table td:nth-child(7) {
+  width: 17%;
+}
+#lesson-plan-table th:nth-child(8),
+#lesson-plan-table td:nth-child(8),
+#saved-data-table th:nth-child(8),
+#saved-data-table td:nth-child(8) {
+  width: 6%;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+  .top-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .info-item {
+    width: 100%;
+  }
+  .button-group {
+    width: 100%;
+    justify-content: flex-start; /* Align buttons to start on small screens */
+  }
+  table,
+  thead,
+  tbody,
+  th,
+  td,
+  tr {
+    display: block;
+  }
+  thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+  tr {
+    border: 1px solid #ccc;
+    margin-bottom: 1rem;
+    border-radius: 0.75rem;
+    overflow: hidden;
+  }
+  td {
+    border: none;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    padding-left: 50%;
+    text-align: right;
+  }
+  td:before {
+    position: absolute;
+    top: 0;
+    left: 6px;
+    width: 45%;
+    padding-right: 10px;
+    white-space: nowrap;
+    text-align: left;
+    font-weight: 600;
+    color: #4b5563;
+  }
+  td:nth-of-type(1):before {
+    content: "Prds";
+  }
+  td:nth-of-type(2):before {
+    content: "Subject";
+  }
+  td:nth-of-type(3):before {
+    content: "Day 1";
+  }
+  td:nth-of-type(4):before {
+    content: "Day 2";
+  }
+  td:nth-of-type(5):before {
+    content: "Day 3";
+  }
+  td:nth-of-type(6):before {
+    content: "Day 4";
+  }
+  td:nth-of-type(7):before {
+    content: "Day 5";
+  }
+  td:nth-of-type(8):before {
+    content: "Teacher";
+  }
+  td select {
+    width: calc(100% - 10px);
+    max-width: none;
+  }
+}
+.save-button {
+  background-color: #4caf50;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.1s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.save-button:hover {
+  background-color: #45a049;
+  transform: translateY(-1px);
+}
+.save-button:active {
+  transform: translateY(1px);
+}
+#saved-data-display {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #e5e7eb;
+  width: 100%;
+  display: none;
+}
+#saved-data-display h2 {
+  margin-bottom: 1rem;
+  color: #1f2937;
+}
+#saved-data-table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  font-size: 0.9rem;
+}
+#saved-data-table th,
+#saved-data-table td {
+  padding: 0.6rem 0.8rem;
+  text-align: left;
+  border: none;
+}
+#saved-data-table th {
+  background-color: #ffffff;
+  color: #0f5132;
+}
+#saved-data-table tr:nth-child(even) {
+  background-color: #f9fafb;
+}

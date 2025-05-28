@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weekly Lesson Plan</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="public/css/style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="top-row">
+        <div class="info-item">
+          <label for="class-select">Select Class:</label>
+          <select id="class-select">
+            <option value="">--Select a Class--</option>
+          </select>
+        </div>
+        <div class="button-group">
+          <button id="save-lesson-plan-btn" class="save-button">
+            Save Lesson Plan
+          </button>
+          <button id="show-saved-data-btn" class="save-button">
+            Show Saved Data
+          </button>
+        </div>
+      </div>
+
+      <h2 class="text-2xl font-semibold mb-6">Weekly Schedule</h2>
+      <table id="lesson-plan-table">
+        <thead>
+          <tr>
+            <th>Prds</th>
+            <th>Subject</th>
+            <th>Day 1</th>
+            <th>Day 2</th>
+            <th>Day 3</th>
+            <th>Day 4</th>
+            <th>Day 5</th>
+            <th>Teacher</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+
+      <div id="saved-data-display">
+        <h2 id="saved-data-title" class="text-2xl font-semibold mb-6">
+          Weekly Lesson Plan Grade (), Week No.
+        </h2>
+        <table id="saved-data-table">
+          <thead>
+            <tr>
+              <th>Prds</th>
+              <th>Subject</th>
+              <th>Day 1</th>
+              <th>Day 2</th>
+              <th>Day 3</th>
+              <th>Day 4</th>
+              <th>Day 5</th>
+              <th>Teacher</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+    <script src="public/js/main.js"></script>
+  </body>
+</html>
